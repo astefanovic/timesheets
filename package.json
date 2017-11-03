@@ -1,0 +1,23 @@
+{
+    "name": "timesheets",
+    "version": "1.0.0",
+    "description": "Timesheet system built on Node.js and SQLite",
+    "main": "app.js",
+    "scripts": {
+	"start": "node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/astefanovic/timesheets.git"
+    },
+    "author": "Aleksandar Stefanovic",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/astefanovic/timesheets/issues"
+    },
+    "homepage": "https://github.com/astefanovic/timesheets#readme",
+    "dependencies": {
+        "express": "^4.16.2"
+    }
+}
