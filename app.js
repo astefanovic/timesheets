@@ -1,17 +1,17 @@
 var express = require("express");
+var bodyParser = require("body-parser");
 
 // Route files
 var indexRoutes = require("./routes/index");
 
-// Variable that runs express routing functions
+// Object to be used for routing
 var app = express();
 
-console.log("TEST");
+// Using body-parser to access post request data
+app.use(bodyParser.urlencoded({extended: true}));
 
-// Home page
-app.get("/", function(req, res) {
-    res.send("Home Page");
-});
+// Sets the views used to ejs templating
+app.set('view engine', 'ejs');
 
 // Capturing the routes from route files
 app.use(indexRoutes);
