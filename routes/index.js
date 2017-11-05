@@ -3,8 +3,10 @@ var express = require("express");
 // Router to declare the routes and export at the end
 var router = express.Router();
 
-router.get("/", function(req, res) {
-    res.render("timesheets", { user: req.user });
+console.log("Routing");
+router.get("/", function(req, res){
+    console.log("Will not print");
+    res.render("timesheets", {user: "test"});
 });
 
 module.exports = router;
