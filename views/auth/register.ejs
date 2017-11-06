@@ -1,0 +1,39 @@
+<% if(typeof user == 'undefined') { %>
+    <% include ../partials/header %>
+<% } else {  %>
+    <%- include('../partials/header', {user: user}); %>
+<% } %>
+
+<div class="container">
+    <h1 class="display-4 pt-5 pb-2">Register</h1>
+    <hr>
+    <form action="/register" method="post">
+	<div class="row">
+	    <div class="col-md-12 col-xs-12">
+		<div class="form-group">
+		    <input type="email" class="form-control" placeholder="Email">
+		</div>
+	    </div>
+	    <div class="col-md-12 col-xs-12">
+		<div class="form-group">
+		    <input type="text" class="form-control" placeholder="Name">
+		</div>
+	    </div>
+	    <div class="col-md-6 col-xs-12">
+		<div class="form-group">
+		    <input type="password" class="form-control" placeholder="Password">
+		</div>
+	    </div>
+	    <div class="col-md-6 col-xs-12">
+		<div class="form-group">
+		    <input type="password" class="form-control" placeholder="Re-enter Password">
+		</div>
+	    </div>
+	</div>
+	<div class="form-group">
+	    <button type="submit" class="btn btn-primary">Register</button>
+	</div>
+    </form>
+</div>
+
+<% include ../partials/footer %>
